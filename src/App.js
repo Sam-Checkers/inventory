@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
 import Navbar from './Navbar';
 import Home from './Home';
-import Create from './Create';
+import CreatePost from './CreatePost';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
 import Login from './Login';
 import Logout from './Logout';
 import Register from './Register';
-import auth0Config from './auth0Config'; // Import the Auth0 configuration
+import auth0Config from './auth0Config';
 
 function App() {
   const { domain, clientId } = auth0Config;
@@ -26,7 +26,7 @@ function App() {
           <div className="content">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/create" component={Create} />
+              <Route path="/create" component={CreatePost} />
               <Route path="/blogs/:id" component={BlogDetails} />
               <Route path="/login" component={Login} />
               <Route path="/logout" component={Logout} />

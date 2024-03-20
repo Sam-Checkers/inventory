@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const BlogList = ({ blogs }) => {
@@ -14,5 +15,5 @@ const BlogList = ({ blogs }) => {
     </div>
   );
 }
- 
+
 export default BlogList;
