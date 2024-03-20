@@ -11,6 +11,7 @@ const CreatePost = () => {
   const history = useHistory();
 
   const handleCreatePost = async () => {
+    console.log('text')
     try {
       const token = await getAccessTokenSilently();
       const config = {
@@ -19,7 +20,7 @@ const CreatePost = () => {
         },
       };
       const newPost = { title, body, author: user.name };
-      const response = await axios.post('http://localhost:8000/home', newPost, config);
+      const response = await axios.post('http://localhost:3000/home', newPost, config);
       console.log('New post created:', response.data);
       history.push('/');
     } catch (error) {

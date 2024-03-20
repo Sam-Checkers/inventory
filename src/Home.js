@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 const Home = () => {
   const { user, isAuthenticated } = useAuth0();
   const [userPosts, setUserPosts] = useState([]);
-  const { data: allPosts, error, isPending } = useFetch('http://localhost:8000/createposts');
+  const { data: allPosts, error, isPending } = useFetch('http://localhost:3000/create');
 
   useEffect(() => {
     if (isAuthenticated && allPosts) {
